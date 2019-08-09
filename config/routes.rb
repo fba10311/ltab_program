@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Team assignment resource:
+
+  # CREATE
+  get("/team_assignments/new", { :controller => "team_assignments", :action => "new_form" })
+  post("/create_team_assignment", { :controller => "team_assignments", :action => "create_row" })
+
+  # READ
+  get("/team_assignments", { :controller => "team_assignments", :action => "index" })
+  get("/team_assignments/:id_to_display", { :controller => "team_assignments", :action => "show" })
+
+  # UPDATE
+  get("/team_assignments/:prefill_with_id/edit", { :controller => "team_assignments", :action => "edit_form" })
+  post("/update_team_assignment/:id_to_modify", { :controller => "team_assignments", :action => "update_row" })
+
+  # DELETE
+  get("/delete_team_assignment/:id_to_remove", { :controller => "team_assignments", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Bout resource:
 
   # CREATE

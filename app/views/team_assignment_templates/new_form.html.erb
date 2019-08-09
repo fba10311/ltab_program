@@ -1,0 +1,45 @@
+<h1>
+  Add a new team assignment
+</h1>
+
+
+<hr>
+
+<!-- Form team_assignment start -->
+<form action="/create_team_assignment" method="post">
+<!-- Form team_assignment end -->
+
+  <!-- Label and input for bout_id start -->
+  <div class="form-group">
+    <label for="bout_id">
+      Bout
+    </label>
+
+    <!-- Input for bout_id start -->
+    <input type="text" id="bout_id" name="bout_id" class="form-control">
+    <!-- Input for bout_id end -->
+  </div>
+  <!-- Label and input for bout_id end -->
+
+  <!-- Label and input for team_id start -->
+  <div class="form-group">
+    <label for="team_id">
+      Team
+    </label>
+
+    <!-- Input for team_id start -->
+    <input type="text" id="team_id" name="team_id" class="form-control">
+    <!-- Input for team_id end -->
+  </div>
+  <!-- Label and input for team_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create team assignment
+  </button>
+</form>
+
+<hr>
+
+<a href="/team_assignments">
+  Go back
+</a>
