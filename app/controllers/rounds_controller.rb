@@ -39,6 +39,72 @@ class RoundsController < ApplicationController
     end
   end
 
+  def create_row_from_team
+    @round = Round.new
+
+    @round.bout_id = params.fetch("bout_id")
+    @round.team_id = params.fetch("team_id")
+    @round.student_id = params.fetch("student_id")
+    @round.time = params.fetch("time")
+    @round.score_1 = params.fetch("score_1")
+    @round.score_2 = params.fetch("score_2")
+    @round.score_3 = params.fetch("score_3")
+    @round.score_4 = params.fetch("score_4")
+    @round.score_5 = params.fetch("score_5")
+
+    if @round.valid?
+      @round.save
+
+      redirect_to("/teams/#{@round.team_id}", notice: "Round created successfully.")
+    else
+      render("round_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_student
+    @round = Round.new
+
+    @round.bout_id = params.fetch("bout_id")
+    @round.team_id = params.fetch("team_id")
+    @round.student_id = params.fetch("student_id")
+    @round.time = params.fetch("time")
+    @round.score_1 = params.fetch("score_1")
+    @round.score_2 = params.fetch("score_2")
+    @round.score_3 = params.fetch("score_3")
+    @round.score_4 = params.fetch("score_4")
+    @round.score_5 = params.fetch("score_5")
+
+    if @round.valid?
+      @round.save
+
+      redirect_to("/students/#{@round.student_id}", notice: "Round created successfully.")
+    else
+      render("round_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_bout
+    @round = Round.new
+
+    @round.bout_id = params.fetch("bout_id")
+    @round.team_id = params.fetch("team_id")
+    @round.student_id = params.fetch("student_id")
+    @round.time = params.fetch("time")
+    @round.score_1 = params.fetch("score_1")
+    @round.score_2 = params.fetch("score_2")
+    @round.score_3 = params.fetch("score_3")
+    @round.score_4 = params.fetch("score_4")
+    @round.score_5 = params.fetch("score_5")
+
+    if @round.valid?
+      @round.save
+
+      redirect_to("/bouts/#{@round.bout_id}", notice: "Round created successfully.")
+    else
+      render("round_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @round = Round.find(params.fetch("prefill_with_id"))
 

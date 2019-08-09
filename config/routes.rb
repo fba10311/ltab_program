@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # CREATE
   get("/rounds/new", { :controller => "rounds", :action => "new_form" })
   post("/create_round", { :controller => "rounds", :action => "create_row" })
+  post("/create_round_from_bout", { :controller => "rounds", :action => "create_row_from_bout" })
+  post("/create_round_from_student", { :controller => "rounds", :action => "create_row_from_student" })
+  post("/create_round_from_team", { :controller => "rounds", :action => "create_row_from_team" })
 
   # READ
   get("/rounds", { :controller => "rounds", :action => "index" })
@@ -28,6 +31,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/team_assignments/new", { :controller => "team_assignments", :action => "new_form" })
   post("/create_team_assignment", { :controller => "team_assignments", :action => "create_row" })
+  post("/create_team_assignment_from_bout", { :controller => "team_assignments", :action => "create_row_from_bout" })
+  post("/create_team_assignment_from_team", { :controller => "team_assignments", :action => "create_row_from_team" })
 
   # READ
   get("/team_assignments", { :controller => "team_assignments", :action => "index" })
@@ -49,6 +54,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/bouts/new", { :controller => "bouts", :action => "new_form" })
   post("/create_bout", { :controller => "bouts", :action => "create_row" })
+  post("/create_bout_from_level", { :controller => "bouts", :action => "create_row_from_level" })
 
   # READ
   get("/bouts", { :controller => "bouts", :action => "index" })
@@ -88,6 +94,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/students/new", { :controller => "students", :action => "new_form" })
   post("/create_student", { :controller => "students", :action => "create_row" })
+  post("/create_student_from_team", { :controller => "students", :action => "create_row_from_team" })
 
   # READ
   get("/students", { :controller => "students", :action => "index" })
@@ -108,6 +115,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/teams/new", { :controller => "teams", :action => "new_form" })
   post("/create_team", { :controller => "teams", :action => "create_row" })
+  post("/create_team_from_coach", { :controller => "teams", :action => "create_row_from_coach" })
 
   # READ
   get("/teams", { :controller => "teams", :action => "index" })

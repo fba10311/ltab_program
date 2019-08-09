@@ -6,6 +6,9 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @round = Round.new
+    @team_assignment = TeamAssignment.new
+    @student = Student.new
     @team = Team.find(params.fetch("id_to_display"))
 
     render("team_templates/show.html.erb")
@@ -28,6 +31,22 @@ class TeamsController < ApplicationController
       @team.save
 
       redirect_back(:fallback_location => "/teams", :notice => "Team created successfully.")
+    else
+      render("team_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_coach
+    @team = Team.new
+
+    @team.school_name = params.fetch("school_name")
+    @team.school_address = params.fetch("school_address")
+    @team.coach_id = params.fetch("coach_id")
+
+    if @team.valid?
+      @team.save
+
+      redirect_to("/coaches/#{@team.coach_id}", notice: "Team created successfully.")
     else
       render("team_templates/new_form_with_errors.html.erb")
     end

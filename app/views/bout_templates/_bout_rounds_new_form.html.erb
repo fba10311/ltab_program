@@ -1,0 +1,109 @@
+<!-- Form round start -->
+<form action="/create_round_from_bout" method="post">
+<!-- Form round end -->
+
+  <!-- Label and input for bout_id start -->
+  <!-- Input for bout_id start -->
+  <input type="hidden" name="bout_id" value="<%= @bout.id %>">
+  <!-- Input for bout_id end -->
+
+  <!-- Label and input for team_id start -->
+  <div class="form-group">
+    <label for="team_id">
+      Team
+    </label>
+
+    <!-- Input for team_id start -->
+    <input type="text" id="team_id" name="team_id" class="form-control" value="<%= @round.team_id %>">
+    <!-- Input for team_id end -->
+  </div>
+  <!-- Label and input for team_id end -->
+
+  <!-- Label and input for student_id start -->
+  <div class="form-group">
+    <label for="student_id">
+      Student
+    </label>
+
+    <!-- Input for student_id start -->
+    <input type="text" id="student_id" name="student_id" class="form-control" value="<%= @round.student_id %>">
+    <!-- Input for student_id end -->
+  </div>
+  <!-- Label and input for student_id end -->
+
+  <!-- Label and input for time start -->
+  <div class="form-group">
+    <label for="time">
+      Time
+    </label>
+
+    <!-- Input for time start -->
+    <input type="text" id="time" name="time" class="form-control" value="<%= @round.time %>">
+    <!-- Input for time end -->
+  </div>
+  <!-- Label and input for time end -->
+
+  <!-- Label and input for score_1 start -->
+  <div class="form-group">
+    <label for="score_1">
+      Score 1
+    </label>
+
+    <!-- Input for score_1 start -->
+    <input type="text" id="score_1" name="score_1" class="form-control" value="<%= @round.score_1 %>">
+    <!-- Input for score_1 end -->
+  </div>
+  <!-- Label and input for score_1 end -->
+
+  <!-- Label and input for score_2 start -->
+  <div class="form-group">
+    <label for="score_2">
+      Score 2
+    </label>
+
+    <!-- Input for score_2 start -->
+    <input type="text" id="score_2" name="score_2" class="form-control" value="<%= @round.score_2 %>">
+    <!-- Input for score_2 end -->
+  </div>
+  <!-- Label and input for score_2 end -->
+
+  <!-- Label and input for score_3 start -->
+  <div class="form-group">
+    <label for="score_3">
+      Score 3
+    </label>
+
+    <!-- Input for score_3 start -->
+    <input type="text" id="score_3" name="score_3" class="form-control" value="<%= @round.score_3 %>">
+    <!-- Input for score_3 end -->
+  </div>
+  <!-- Label and input for score_3 end -->
+
+  <!-- Label and input for score_4 start -->
+  <div class="form-group">
+    <label for="score_4">
+      Score 4
+    </label>
+
+    <!-- Input for score_4 start -->
+    <input type="text" id="score_4" name="score_4" class="form-control" value="<%= @round.score_4 %>">
+    <!-- Input for score_4 end -->
+  </div>
+  <!-- Label and input for score_4 end -->
+
+  <!-- Label and input for score_5 start -->
+  <div class="form-group">
+    <label for="score_5">
+      Score 5
+    </label>
+
+    <!-- Input for score_5 start -->
+    <input type="text" id="score_5" name="score_5" class="form-control" value="<%= @round.score_5 %>">
+    <!-- Input for score_5 end -->
+  </div>
+  <!-- Label and input for score_5 end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create round
+  </button>
+</form>

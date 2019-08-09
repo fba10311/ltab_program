@@ -6,6 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @round = Round.new
     @student = Student.find(params.fetch("id_to_display"))
 
     render("student_templates/show.html.erb")
@@ -28,6 +29,22 @@ class StudentsController < ApplicationController
       @student.save
 
       redirect_back(:fallback_location => "/students", :notice => "Student created successfully.")
+    else
+      render("student_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_team
+    @student = Student.new
+
+    @student.first_name = params.fetch("first_name")
+    @student.last_name = params.fetch("last_name")
+    @student.team_id = params.fetch("team_id")
+
+    if @student.valid?
+      @student.save
+
+      redirect_to("/teams/#{@student.team_id}", notice: "Student created successfully.")
     else
       render("student_templates/new_form_with_errors.html.erb")
     end

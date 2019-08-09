@@ -6,6 +6,8 @@ class BoutsController < ApplicationController
   end
 
   def show
+    @round = Round.new
+    @team_assignment = TeamAssignment.new
     @bout = Bout.find(params.fetch("id_to_display"))
 
     render("bout_templates/show.html.erb")
@@ -26,6 +28,20 @@ class BoutsController < ApplicationController
       @bout.save
 
       redirect_back(:fallback_location => "/bouts", :notice => "Bout created successfully.")
+    else
+      render("bout_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_level
+    @bout = Bout.new
+
+    @bout.level_id = params.fetch("level_id")
+
+    if @bout.valid?
+      @bout.save
+
+      redirect_to("/levels/#{@bout.level_id}", notice: "Bout created successfully.")
     else
       render("bout_templates/new_form_with_errors.html.erb")
     end

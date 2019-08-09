@@ -32,6 +32,36 @@ class TeamAssignmentsController < ApplicationController
     end
   end
 
+  def create_row_from_team
+    @team_assignment = TeamAssignment.new
+
+    @team_assignment.bout_id = params.fetch("bout_id")
+    @team_assignment.team_id = params.fetch("team_id")
+
+    if @team_assignment.valid?
+      @team_assignment.save
+
+      redirect_to("/teams/#{@team_assignment.team_id}", notice: "TeamAssignment created successfully.")
+    else
+      render("team_assignment_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_bout
+    @team_assignment = TeamAssignment.new
+
+    @team_assignment.bout_id = params.fetch("bout_id")
+    @team_assignment.team_id = params.fetch("team_id")
+
+    if @team_assignment.valid?
+      @team_assignment.save
+
+      redirect_to("/bouts/#{@team_assignment.bout_id}", notice: "TeamAssignment created successfully.")
+    else
+      render("team_assignment_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @team_assignment = TeamAssignment.find(params.fetch("prefill_with_id"))
 

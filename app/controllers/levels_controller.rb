@@ -6,6 +6,7 @@ class LevelsController < ApplicationController
   end
 
   def show
+    @bout = Bout.new
     @level = Level.find(params.fetch("id_to_display"))
 
     render("level_templates/show.html.erb")

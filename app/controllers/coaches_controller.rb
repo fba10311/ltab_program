@@ -6,6 +6,7 @@ class CoachesController < ApplicationController
   end
 
   def show
+    @team = Team.new
     @coach = Coach.find(params.fetch("id_to_display"))
 
     render("coach_templates/show.html.erb")
