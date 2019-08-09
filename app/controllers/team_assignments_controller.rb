@@ -1,6 +1,7 @@
 class TeamAssignmentsController < ApplicationController
   def index
-    @team_assignments = TeamAssignment.page(params[:page]).per(10)
+    @q = TeamAssignment.ransack(params[:q])
+    @team_assignments = @q.result(:distinct => true).includes(:team, :bout).page(params[:page]).per(10)
 
     render("team_assignment_templates/index.html.erb")
   end

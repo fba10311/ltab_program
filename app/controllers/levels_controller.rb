@@ -1,6 +1,7 @@
 class LevelsController < ApplicationController
   def index
-    @levels = Level.page(params[:page]).per(10)
+    @q = Level.ransack(params[:q])
+    @levels = @q.result(:distinct => true).includes(:bouts).page(params[:page]).per(10)
 
     render("level_templates/index.html.erb")
   end

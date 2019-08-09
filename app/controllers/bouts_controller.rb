@@ -1,6 +1,7 @@
 class BoutsController < ApplicationController
   def index
-    @bouts = Bout.page(params[:page]).per(10)
+    @q = Bout.ransack(params[:q])
+    @bouts = @q.result(:distinct => true).includes(:level, :team_assignments, :rounds, :teams).page(params[:page]).per(10)
 
     render("bout_templates/index.html.erb")
   end
