@@ -1,4 +1,6 @@
 ActiveAdmin.register Team do
+
+ permit_params :school_name, :school_address, :coach_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
