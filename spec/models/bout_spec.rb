@@ -14,6 +14,8 @@ RSpec.describe Bout, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:teams) }
+
     end
 
     describe "Validations" do

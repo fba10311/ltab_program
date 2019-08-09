@@ -14,6 +14,10 @@ class Team < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :bouts,
+             :through => :team_assignments,
+             :source => :bout
+
   # Validations
 
 end
