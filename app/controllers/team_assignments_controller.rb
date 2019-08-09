@@ -1,6 +1,6 @@
 class TeamAssignmentsController < ApplicationController
   def index
-    @team_assignments = TeamAssignment.all
+    @team_assignments = TeamAssignment.page(params[:page]).per(10)
 
     render("team_assignment_templates/index.html.erb")
   end

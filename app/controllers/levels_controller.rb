@@ -1,6 +1,6 @@
 class LevelsController < ApplicationController
   def index
-    @levels = Level.all
+    @levels = Level.page(params[:page]).per(10)
 
     render("level_templates/index.html.erb")
   end
