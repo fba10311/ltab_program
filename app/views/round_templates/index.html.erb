@@ -1,0 +1,162 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All rounds
+    </h1>
+
+    <a href="/rounds/new" class="btn btn-block btn-outline-secondary">
+      Add a new round
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Bout
+        </th>
+
+        <th>
+          Team
+        </th>
+
+        <th>
+          Student
+        </th>
+
+        <th>
+          Time
+        </th>
+
+        <th>
+          Score 1
+        </th>
+
+        <th>
+          Score 2
+        </th>
+
+        <th>
+          Score 3
+        </th>
+
+        <th>
+          Score 4
+        </th>
+
+        <th>
+          Score 5
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @rounds.each do |round| %>
+      <tr>
+        <!-- Display round.id start -->
+        <td>
+          <%= round.id %>
+        </td>
+        <!-- Display round.id end -->
+
+        <!-- Display round.bout_id start -->
+        <td>
+          <%= round.bout_id %>
+        </td>
+        <!-- Display round.bout_id end -->
+
+        <!-- Display round.team_id start -->
+        <td>
+          <%= round.team_id %>
+        </td>
+        <!-- Display round.team_id end -->
+
+        <!-- Display round.student_id start -->
+        <td>
+          <%= round.student_id %>
+        </td>
+        <!-- Display round.student_id end -->
+
+        <!-- Display round.time start -->
+        <td>
+          <%= round.time %>
+        </td>
+        <!-- Display round.time end -->
+
+        <!-- Display round.score_1 start -->
+        <td>
+          <%= round.score_1 %>
+        </td>
+        <!-- Display round.score_1 end -->
+
+        <!-- Display round.score_2 start -->
+        <td>
+          <%= round.score_2 %>
+        </td>
+        <!-- Display round.score_2 end -->
+
+        <!-- Display round.score_3 start -->
+        <td>
+          <%= round.score_3 %>
+        </td>
+        <!-- Display round.score_3 end -->
+
+        <!-- Display round.score_4 start -->
+        <td>
+          <%= round.score_4 %>
+        </td>
+        <!-- Display round.score_4 end -->
+
+        <!-- Display round.score_5 start -->
+        <td>
+          <%= round.score_5 %>
+        </td>
+        <!-- Display round.score_5 end -->
+
+        <!-- Display round.created_at start -->
+        <td>
+          <%= time_ago_in_words(round.created_at) %> ago
+        </td>
+        <!-- Display round.created_at end -->
+
+        <!-- Display round.updated_at start -->
+        <td>
+          <%= time_ago_in_words(round.updated_at) %> ago
+        </td>
+        <!-- Display round.updated_at end -->
+
+        <td>
+          <a href="/rounds/<%= round.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

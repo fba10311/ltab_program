@@ -1,0 +1,136 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Round #<%= @round.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/rounds" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link round start -->
+      <div class="col">
+        <a href="/rounds/<%= @round.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit round
+        </a>
+      </div>
+      <!-- Edit link round end -->
+
+      <!-- Delete link round start -->
+      <div class="col">
+        <a href="/delete_round/<%= @round.id %>" class="btn btn-block btn-outline-secondary">
+          Delete round
+        </a>
+      </div>
+      <!-- Delete link round end -->
+    </div>
+
+    <dl>
+      <dt>
+        Bout
+      </dt>
+      <!-- Display bout_id start -->
+      <dd>
+        <%= @round.bout_id %>
+      </dd>
+      <!-- Display bout_id end -->
+
+      <dt>
+        Team
+      </dt>
+      <!-- Display team_id start -->
+      <dd>
+        <%= @round.team_id %>
+      </dd>
+      <!-- Display team_id end -->
+
+      <dt>
+        Student
+      </dt>
+      <!-- Display student_id start -->
+      <dd>
+        <%= @round.student_id %>
+      </dd>
+      <!-- Display student_id end -->
+
+      <dt>
+        Time
+      </dt>
+      <!-- Display time start -->
+      <dd>
+        <%= @round.time %>
+      </dd>
+      <!-- Display time end -->
+
+      <dt>
+        Score 1
+      </dt>
+      <!-- Display score_1 start -->
+      <dd>
+        <%= @round.score_1 %>
+      </dd>
+      <!-- Display score_1 end -->
+
+      <dt>
+        Score 2
+      </dt>
+      <!-- Display score_2 start -->
+      <dd>
+        <%= @round.score_2 %>
+      </dd>
+      <!-- Display score_2 end -->
+
+      <dt>
+        Score 3
+      </dt>
+      <!-- Display score_3 start -->
+      <dd>
+        <%= @round.score_3 %>
+      </dd>
+      <!-- Display score_3 end -->
+
+      <dt>
+        Score 4
+      </dt>
+      <!-- Display score_4 start -->
+      <dd>
+        <%= @round.score_4 %>
+      </dd>
+      <!-- Display score_4 end -->
+
+      <dt>
+        Score 5
+      </dt>
+      <!-- Display score_5 start -->
+      <dd>
+        <%= @round.score_5 %>
+      </dd>
+      <!-- Display score_5 end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@round.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@round.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

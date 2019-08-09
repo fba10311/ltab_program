@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Round resource:
+
+  # CREATE
+  get("/rounds/new", { :controller => "rounds", :action => "new_form" })
+  post("/create_round", { :controller => "rounds", :action => "create_row" })
+
+  # READ
+  get("/rounds", { :controller => "rounds", :action => "index" })
+  get("/rounds/:id_to_display", { :controller => "rounds", :action => "show" })
+
+  # UPDATE
+  get("/rounds/:prefill_with_id/edit", { :controller => "rounds", :action => "edit_form" })
+  post("/update_round/:id_to_modify", { :controller => "rounds", :action => "update_row" })
+
+  # DELETE
+  get("/delete_round/:id_to_remove", { :controller => "rounds", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Team assignment resource:
 
   # CREATE
