@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "coaches#index"
   # Routes for the Round resource:
 
   # CREATE
