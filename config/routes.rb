@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Bout resource:
+
+  # CREATE
+  get("/bouts/new", { :controller => "bouts", :action => "new_form" })
+  post("/create_bout", { :controller => "bouts", :action => "create_row" })
+
+  # READ
+  get("/bouts", { :controller => "bouts", :action => "index" })
+  get("/bouts/:id_to_display", { :controller => "bouts", :action => "show" })
+
+  # UPDATE
+  get("/bouts/:prefill_with_id/edit", { :controller => "bouts", :action => "edit_form" })
+  post("/update_bout/:id_to_modify", { :controller => "bouts", :action => "update_row" })
+
+  # DELETE
+  get("/delete_bout/:id_to_remove", { :controller => "bouts", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Level resource:
 
   # CREATE
