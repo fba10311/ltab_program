@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Level resource:
+
+  # CREATE
+  get("/levels/new", { :controller => "levels", :action => "new_form" })
+  post("/create_level", { :controller => "levels", :action => "create_row" })
+
+  # READ
+  get("/levels", { :controller => "levels", :action => "index" })
+  get("/levels/:id_to_display", { :controller => "levels", :action => "show" })
+
+  # UPDATE
+  get("/levels/:prefill_with_id/edit", { :controller => "levels", :action => "edit_form" })
+  post("/update_level/:id_to_modify", { :controller => "levels", :action => "update_row" })
+
+  # DELETE
+  get("/delete_level/:id_to_remove", { :controller => "levels", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Student resource:
 
   # CREATE
