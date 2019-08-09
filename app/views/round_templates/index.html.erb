@@ -86,19 +86,31 @@
 
         <!-- Display round.bout_id start -->
         <td>
-          <%= round.bout.level_id %>
+          <% if round.bout.present? %>
+            <a href="/bouts/<%= round.bout.id %>">
+              <%= round.bout.level_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display round.bout_id end -->
 
         <!-- Display round.team_id start -->
         <td>
-          <%= round.team.school_name %>
+          <% if round.team.present? %>
+            <a href="/teams/<%= round.team.id %>">
+              <%= round.team.school_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display round.team_id end -->
 
         <!-- Display round.student_id start -->
         <td>
-          <%= round.student.first_name %>
+          <% if round.student.present? %>
+            <a href="/students/<%= round.student.id %>">
+              <%= round.student.first_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display round.student_id end -->
 

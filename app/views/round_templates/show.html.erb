@@ -34,7 +34,11 @@
       </dt>
       <!-- Display bout_id start -->
       <dd>
-        <%= @round.bout_id %>
+        <% if @round.bout.present? %>
+          <a href="/bouts/<%= @round.bout_id %>">
+            <%= @round.bout.level_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display bout_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display team_id start -->
       <dd>
-        <%= @round.team_id %>
+        <% if @round.team.present? %>
+          <a href="/teams/<%= @round.team_id %>">
+            <%= @round.team.school_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display team_id end -->
 
@@ -52,7 +60,11 @@
       </dt>
       <!-- Display student_id start -->
       <dd>
-        <%= @round.student_id %>
+        <% if @round.student.present? %>
+          <a href="/students/<%= @round.student_id %>">
+            <%= @round.student.first_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display student_id end -->
 

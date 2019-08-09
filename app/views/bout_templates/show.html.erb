@@ -34,7 +34,11 @@
       </dt>
       <!-- Display level_id start -->
       <dd>
-        <%= @bout.level_id %>
+        <% if @bout.level.present? %>
+          <a href="/levels/<%= @bout.level_id %>">
+            <%= @bout.level.stage %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display level_id end -->
 

@@ -34,7 +34,11 @@
       </dt>
       <!-- Display bout_id start -->
       <dd>
-        <%= @team_assignment.bout_id %>
+        <% if @team_assignment.bout.present? %>
+          <a href="/bouts/<%= @team_assignment.bout_id %>">
+            <%= @team_assignment.bout.level_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display bout_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display team_id start -->
       <dd>
-        <%= @team_assignment.team_id %>
+        <% if @team_assignment.team.present? %>
+          <a href="/teams/<%= @team_assignment.team_id %>">
+            <%= @team_assignment.team.school_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display team_id end -->
 

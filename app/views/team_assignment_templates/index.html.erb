@@ -58,13 +58,21 @@
 
         <!-- Display team_assignment.bout_id start -->
         <td>
-          <%= team_assignment.bout.level_id %>
+          <% if team_assignment.bout.present? %>
+            <a href="/bouts/<%= team_assignment.bout.id %>">
+              <%= team_assignment.bout.level_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display team_assignment.bout_id end -->
 
         <!-- Display team_assignment.team_id start -->
         <td>
-          <%= team_assignment.team.school_name %>
+          <% if team_assignment.team.present? %>
+            <a href="/teams/<%= team_assignment.team.id %>">
+              <%= team_assignment.team.school_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display team_assignment.team_id end -->
 

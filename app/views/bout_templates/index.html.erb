@@ -54,7 +54,11 @@
 
         <!-- Display bout.level_id start -->
         <td>
-          <%= bout.level.stage %>
+          <% if bout.level.present? %>
+            <a href="/levels/<%= bout.level.id %>">
+              <%= bout.level.stage %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bout.level_id end -->
 

@@ -52,7 +52,11 @@
       </dt>
       <!-- Display team_id start -->
       <dd>
-        <%= @student.team_id %>
+        <% if @student.team.present? %>
+          <a href="/teams/<%= @student.team_id %>">
+            <%= @student.team.school_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display team_id end -->
 
