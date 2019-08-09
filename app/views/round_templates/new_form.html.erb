@@ -40,7 +40,7 @@
     </label>
 
     <!-- Input for student_id start -->
-    <input type="text" id="student_id" name="student_id" class="form-control">
+    <%= select_tag(:student_id, options_from_collection_for_select(Student.all, :id, :first_name, @round.student_id), :class => "form-control") %>
     <!-- Input for student_id end -->
   </div>
   <!-- Label and input for student_id end -->
