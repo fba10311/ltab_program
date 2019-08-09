@@ -51,6 +51,14 @@ class BoutsController < ApplicationController
     end
   end
 
+  def destroy_row_from_level
+    @bout = Bout.find(params.fetch("id_to_remove"))
+
+    @bout.destroy
+
+    redirect_to("/levels/#{@bout.level_id}", notice: "Bout deleted successfully.")
+  end
+
   def destroy_row
     @bout = Bout.find(params.fetch("id_to_remove"))
 

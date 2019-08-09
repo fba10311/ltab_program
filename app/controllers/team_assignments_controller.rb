@@ -53,6 +53,22 @@ class TeamAssignmentsController < ApplicationController
     end
   end
 
+  def destroy_row_from_team
+    @team_assignment = TeamAssignment.find(params.fetch("id_to_remove"))
+
+    @team_assignment.destroy
+
+    redirect_to("/teams/#{@team_assignment.team_id}", notice: "TeamAssignment deleted successfully.")
+  end
+
+  def destroy_row_from_bout
+    @team_assignment = TeamAssignment.find(params.fetch("id_to_remove"))
+
+    @team_assignment.destroy
+
+    redirect_to("/bouts/#{@team_assignment.bout_id}", notice: "TeamAssignment deleted successfully.")
+  end
+
   def destroy_row
     @team_assignment = TeamAssignment.find(params.fetch("id_to_remove"))
 

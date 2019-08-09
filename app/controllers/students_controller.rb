@@ -55,6 +55,14 @@ class StudentsController < ApplicationController
     end
   end
 
+  def destroy_row_from_team
+    @student = Student.find(params.fetch("id_to_remove"))
+
+    @student.destroy
+
+    redirect_to("/teams/#{@student.team_id}", notice: "Student deleted successfully.")
+  end
+
   def destroy_row
     @student = Student.find(params.fetch("id_to_remove"))
 

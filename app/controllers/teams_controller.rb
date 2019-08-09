@@ -55,6 +55,14 @@ class TeamsController < ApplicationController
     end
   end
 
+  def destroy_row_from_coach
+    @team = Team.find(params.fetch("id_to_remove"))
+
+    @team.destroy
+
+    redirect_to("/coaches/#{@team.coach_id}", notice: "Team deleted successfully.")
+  end
+
   def destroy_row
     @team = Team.find(params.fetch("id_to_remove"))
 

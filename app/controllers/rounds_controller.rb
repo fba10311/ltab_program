@@ -67,6 +67,30 @@ class RoundsController < ApplicationController
     end
   end
 
+  def destroy_row_from_team
+    @round = Round.find(params.fetch("id_to_remove"))
+
+    @round.destroy
+
+    redirect_to("/teams/#{@round.team_id}", notice: "Round deleted successfully.")
+  end
+
+  def destroy_row_from_student
+    @round = Round.find(params.fetch("id_to_remove"))
+
+    @round.destroy
+
+    redirect_to("/students/#{@round.student_id}", notice: "Round deleted successfully.")
+  end
+
+  def destroy_row_from_bout
+    @round = Round.find(params.fetch("id_to_remove"))
+
+    @round.destroy
+
+    redirect_to("/bouts/#{@round.bout_id}", notice: "Round deleted successfully.")
+  end
+
   def destroy_row
     @round = Round.find(params.fetch("id_to_remove"))
 
