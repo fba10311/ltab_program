@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link team_assignment start -->
       <div class="col">
         <a href="/team_assignments/<%= @team_assignment.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit team assignment
         </a>
       </div>
-      <!-- Edit link team_assignment end -->
 
-      <!-- Delete link team_assignment start -->
       <div class="col">
         <a href="/delete_team_assignment/<%= @team_assignment.id %>" class="btn btn-block btn-outline-secondary">
           Delete team assignment
         </a>
       </div>
-      <!-- Delete link team_assignment end -->
     </div>
 
     <dl>
       <dt>
         Bout
       </dt>
-      <!-- Display bout_id start -->
       <dd>
         <% if @team_assignment.bout.present? %>
           <a href="/bouts/<%= @team_assignment.bout_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display bout_id end -->
 
       <dt>
         Team
       </dt>
-      <!-- Display team_id start -->
       <dd>
         <% if @team_assignment.team.present? %>
           <a href="/teams/<%= @team_assignment.team_id %>">
@@ -53,28 +46,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display team_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@team_assignment.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@team_assignment.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

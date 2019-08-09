@@ -5,117 +5,79 @@
 
 <hr>
 
-<!-- Form round start -->
 <form action="/create_round" method="post">
-<!-- Form round end -->
 
-  <!-- Label and input for bout_id start -->
   <div class="form-group">
     <label for="bout_id">
       Bout
     </label>
 
-    <!-- Input for bout_id start -->
     <%= select_tag(:bout_id, options_from_collection_for_select(Bout.all, :id, :level_id, @round.bout_id), :class => "form-control") %>
-    <!-- Input for bout_id end -->
   </div>
-  <!-- Label and input for bout_id end -->
 
-  <!-- Label and input for team_id start -->
   <div class="form-group">
     <label for="team_id">
       Team
     </label>
 
-    <!-- Input for team_id start -->
     <%= select_tag(:team_id, options_from_collection_for_select(Team.all, :id, :school_name, @round.team_id), :class => "form-control") %>
-    <!-- Input for team_id end -->
   </div>
-  <!-- Label and input for team_id end -->
 
-  <!-- Label and input for student_id start -->
   <div class="form-group">
     <label for="student_id">
       Student
     </label>
 
-    <!-- Input for student_id start -->
     <%= select_tag(:student_id, options_from_collection_for_select(Student.all, :id, :first_name, @round.student_id), :class => "form-control") %>
-    <!-- Input for student_id end -->
   </div>
-  <!-- Label and input for student_id end -->
 
-  <!-- Label and input for time start -->
   <div class="form-group">
     <label for="time">
       Time
     </label>
 
-    <!-- Input for time start -->
     <input type="text" id="time" name="time" class="form-control">
-    <!-- Input for time end -->
   </div>
-  <!-- Label and input for time end -->
 
-  <!-- Label and input for score_1 start -->
   <div class="form-group">
     <label for="score_1">
       Score 1
     </label>
 
-    <!-- Input for score_1 start -->
     <input type="text" id="score_1" name="score_1" class="form-control">
-    <!-- Input for score_1 end -->
   </div>
-  <!-- Label and input for score_1 end -->
 
-  <!-- Label and input for score_2 start -->
   <div class="form-group">
     <label for="score_2">
       Score 2
     </label>
 
-    <!-- Input for score_2 start -->
     <input type="text" id="score_2" name="score_2" class="form-control">
-    <!-- Input for score_2 end -->
   </div>
-  <!-- Label and input for score_2 end -->
 
-  <!-- Label and input for score_3 start -->
   <div class="form-group">
     <label for="score_3">
       Score 3
     </label>
 
-    <!-- Input for score_3 start -->
     <input type="text" id="score_3" name="score_3" class="form-control">
-    <!-- Input for score_3 end -->
   </div>
-  <!-- Label and input for score_3 end -->
 
-  <!-- Label and input for score_4 start -->
   <div class="form-group">
     <label for="score_4">
       Score 4
     </label>
 
-    <!-- Input for score_4 start -->
     <input type="text" id="score_4" name="score_4" class="form-control">
-    <!-- Input for score_4 end -->
   </div>
-  <!-- Label and input for score_4 end -->
 
-  <!-- Label and input for score_5 start -->
   <div class="form-group">
     <label for="score_5">
       Score 5
     </label>
 
-    <!-- Input for score_5 start -->
     <input type="text" id="score_5" name="score_5" class="form-control">
-    <!-- Input for score_5 end -->
   </div>
-  <!-- Label and input for score_5 end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create round

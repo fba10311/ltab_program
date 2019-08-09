@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "student_templates/students_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -58,25 +54,18 @@
 
       <% @students.each do |student| %>
       <tr>
-        <!-- Display student.id start -->
         <td>
           <%= student.id %>
         </td>
-        <!-- Display student.id end -->
 
-        <!-- Display student.first_name start -->
         <td>
           <%= student.first_name %>
         </td>
-        <!-- Display student.first_name end -->
 
-        <!-- Display student.last_name start -->
         <td>
           <%= student.last_name %>
         </td>
-        <!-- Display student.last_name end -->
 
-        <!-- Display student.team_id start -->
         <td>
           <% if student.team.present? %>
             <a href="/teams/<%= student.team.id %>">
@@ -84,19 +73,14 @@
             </a>
           <% end %>
         </td>
-        <!-- Display student.team_id end -->
 
-        <!-- Display student.created_at start -->
         <td>
           <%= time_ago_in_words(student.created_at) %> ago
         </td>
-        <!-- Display student.created_at end -->
 
-        <!-- Display student.updated_at start -->
         <td>
           <%= time_ago_in_words(student.updated_at) %> ago
         </td>
-        <!-- Display student.updated_at end -->
 
         <td>
           <a href="/students/<%= student.id %>">

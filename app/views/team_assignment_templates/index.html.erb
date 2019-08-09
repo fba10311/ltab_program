@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "team_assignment_templates/team_assignments_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -54,13 +50,10 @@
 
       <% @team_assignments.each do |team_assignment| %>
       <tr>
-        <!-- Display team_assignment.id start -->
         <td>
           <%= team_assignment.id %>
         </td>
-        <!-- Display team_assignment.id end -->
 
-        <!-- Display team_assignment.bout_id start -->
         <td>
           <% if team_assignment.bout.present? %>
             <a href="/bouts/<%= team_assignment.bout.id %>">
@@ -68,9 +61,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display team_assignment.bout_id end -->
 
-        <!-- Display team_assignment.team_id start -->
         <td>
           <% if team_assignment.team.present? %>
             <a href="/teams/<%= team_assignment.team.id %>">
@@ -78,19 +69,14 @@
             </a>
           <% end %>
         </td>
-        <!-- Display team_assignment.team_id end -->
 
-        <!-- Display team_assignment.created_at start -->
         <td>
           <%= time_ago_in_words(team_assignment.created_at) %> ago
         </td>
-        <!-- Display team_assignment.created_at end -->
 
-        <!-- Display team_assignment.updated_at start -->
         <td>
           <%= time_ago_in_words(team_assignment.updated_at) %> ago
         </td>
-        <!-- Display team_assignment.updated_at end -->
 
         <td>
           <a href="/team_assignments/<%= team_assignment.id %>">

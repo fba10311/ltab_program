@@ -5,45 +5,31 @@
 
 <hr>
 
-<!-- Form team start -->
 <form action="/create_team" method="post">
-<!-- Form team end -->
 
-  <!-- Label and input for school_name start -->
   <div class="form-group">
     <label for="school_name">
       School name
     </label>
 
-    <!-- Input for school_name start -->
     <input type="text" id="school_name" name="school_name" class="form-control">
-    <!-- Input for school_name end -->
   </div>
-  <!-- Label and input for school_name end -->
 
-  <!-- Label and input for school_address start -->
   <div class="form-group">
     <label for="school_address">
       School address
     </label>
 
-    <!-- Input for school_address start -->
     <input type="text" id="school_address" name="school_address" class="form-control">
-    <!-- Input for school_address end -->
   </div>
-  <!-- Label and input for school_address end -->
 
-  <!-- Label and input for coach_id start -->
   <div class="form-group">
     <label for="coach_id">
       Coach
     </label>
 
-    <!-- Input for coach_id start -->
     <%= select_tag(:coach_id, options_from_collection_for_select(Coach.all, :id, :first_name, @team.coach_id), :class => "form-control") %>
-    <!-- Input for coach_id end -->
   </div>
-  <!-- Label and input for coach_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create team

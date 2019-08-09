@@ -6,11 +6,9 @@
   <ul class="list-group list-group-flush">
     <% @bout.teams.each do |team| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/teams/<%= team.id %>">
           <%= team.school_name %>
         </a>
-        <!-- Show link end -->
 
       </li>
     <% end %>

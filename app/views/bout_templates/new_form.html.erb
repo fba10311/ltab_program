@@ -5,21 +5,15 @@
 
 <hr>
 
-<!-- Form bout start -->
 <form action="/create_bout" method="post">
-<!-- Form bout end -->
 
-  <!-- Label and input for level_id start -->
   <div class="form-group">
     <label for="level_id">
       Level
     </label>
 
-    <!-- Input for level_id start -->
     <%= select_tag(:level_id, options_from_collection_for_select(Level.all, :id, :stage, @bout.level_id), :class => "form-control") %>
-    <!-- Input for level_id end -->
   </div>
-  <!-- Label and input for level_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create bout

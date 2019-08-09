@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @level.present? %>
   <% if @level.errors.any? %>
     <% @level.errors.full_messages.each do |message| %>
@@ -16,21 +15,15 @@
 
 <hr>
 
-<!-- Form level start -->
 <form action="/create_level" method="post">
-<!-- Form level end -->
 
-  <!-- Label and input for stage start -->
   <div class="form-group">
     <label for="stage">
       Stage
     </label>
 
-    <!-- Input for stage start -->
     <input type="text" id="stage" name="stage" class="form-control" value="<%= @level.stage %>">
-    <!-- Input for stage end -->
   </div>
-  <!-- Label and input for stage end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create level

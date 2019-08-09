@@ -1,23 +1,14 @@
-<!-- Form team_assignment start -->
 <form action="/create_team_assignment_from_team" method="post">
-<!-- Form team_assignment end -->
 
-  <!-- Label and input for bout_id start -->
   <div class="form-group">
     <label for="bout_id">
       Bout
     </label>
 
-    <!-- Input for bout_id start -->
     <%= select_tag(:bout_id, options_from_collection_for_select(Bout.all, :id, :level_id, @team_assignment.bout_id), :class => "form-control") %>
-    <!-- Input for bout_id end -->
   </div>
-  <!-- Label and input for bout_id end -->
 
-  <!-- Label and input for team_id start -->
-  <!-- Input for team_id start -->
   <input type="hidden" name="team_id" value="<%= @team.id %>">
-  <!-- Input for team_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create team assignment
