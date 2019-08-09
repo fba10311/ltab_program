@@ -27,7 +27,7 @@
     </label>
 
     <!-- Input for level_id start -->
-    <input type="text" id="level_id" name="level_id" class="form-control" value="<%= @bout.level_id %>">
+    <%= select_tag(:level_id, options_from_collection_for_select(Level.all, :id, :stage, @bout.level_id), :class => "form-control") %>
     <!-- Input for level_id end -->
   </div>
   <!-- Label and input for level_id end -->
