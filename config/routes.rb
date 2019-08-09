@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Student resource:
+
+  # CREATE
+  get("/students/new", { :controller => "students", :action => "new_form" })
+  post("/create_student", { :controller => "students", :action => "create_row" })
+
+  # READ
+  get("/students", { :controller => "students", :action => "index" })
+  get("/students/:id_to_display", { :controller => "students", :action => "show" })
+
+  # UPDATE
+  get("/students/:prefill_with_id/edit", { :controller => "students", :action => "edit_form" })
+  post("/update_student/:id_to_modify", { :controller => "students", :action => "update_row" })
+
+  # DELETE
+  get("/delete_student/:id_to_remove", { :controller => "students", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Team resource:
 
   # CREATE

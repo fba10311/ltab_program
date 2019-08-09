@@ -1,0 +1,68 @@
+<!-- Validation failure messages -->
+<% if @student.present? %>
+  <% if @student.errors.any? %>
+    <% @student.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new student
+</h1>
+
+
+<hr>
+
+<!-- Form student start -->
+<form action="/create_student" method="post">
+<!-- Form student end -->
+
+  <!-- Label and input for first_name start -->
+  <div class="form-group">
+    <label for="first_name">
+      First name
+    </label>
+
+    <!-- Input for first_name start -->
+    <input type="text" id="first_name" name="first_name" class="form-control" value="<%= @student.first_name %>">
+    <!-- Input for first_name end -->
+  </div>
+  <!-- Label and input for first_name end -->
+
+  <!-- Label and input for last_name start -->
+  <div class="form-group">
+    <label for="last_name">
+      Last name
+    </label>
+
+    <!-- Input for last_name start -->
+    <input type="text" id="last_name" name="last_name" class="form-control" value="<%= @student.last_name %>">
+    <!-- Input for last_name end -->
+  </div>
+  <!-- Label and input for last_name end -->
+
+  <!-- Label and input for team_id start -->
+  <div class="form-group">
+    <label for="team_id">
+      Team
+    </label>
+
+    <!-- Input for team_id start -->
+    <input type="text" id="team_id" name="team_id" class="form-control" value="<%= @student.team_id %>">
+    <!-- Input for team_id end -->
+  </div>
+  <!-- Label and input for team_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create student
+  </button>
+</form>
+
+<hr>
+
+<a href="/students">
+  Go back
+</a>
