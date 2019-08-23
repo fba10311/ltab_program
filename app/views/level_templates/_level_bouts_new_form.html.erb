@@ -2,6 +2,14 @@
 
   <input type="hidden" name="level_id" value="<%= @level.id %>">
 
+  <div class="form-group">
+    <label for="bout_no">
+      Bout no
+    </label>
+
+    <input type="text" id="bout_no" name="bout_no" class="form-control" value="<%= @bout.bout_no %>">
+  </div>
+
   <button class="btn btn-block btn-outline-secondary">
     Create bout
   </button>

@@ -2,6 +2,18 @@
   <p class="lead">Narrow results:</p>
 
   <div class="form-group">
+    <%= f.label :bout_no, "Bout no" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :bout_no_gteq, :class => "form-control", :placeholder => "Bout no greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :bout_no_lteq, :class => "form-control", :placeholder => "Bout no less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
     <%= f.label :created_at, "Created at" %>
     <div class="row">
       <div class='col-md-6 mb-1'>

@@ -1,6 +1,6 @@
 ActiveAdmin.register Bout do
 
- permit_params :level_id
+ permit_params :level_id, :bout_no
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
