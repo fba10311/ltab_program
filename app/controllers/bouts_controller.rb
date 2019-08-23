@@ -24,6 +24,7 @@ class BoutsController < ApplicationController
     @bout = Bout.new
 
     @bout.level_id = params.fetch("level_id")
+    @bout.bout_no = params.fetch("bout_no")
 
     if @bout.valid?
       @bout.save
@@ -38,6 +39,7 @@ class BoutsController < ApplicationController
     @bout = Bout.new
 
     @bout.level_id = params.fetch("level_id")
+    @bout.bout_no = params.fetch("bout_no")
 
     if @bout.valid?
       @bout.save
@@ -58,6 +60,7 @@ class BoutsController < ApplicationController
     @bout = Bout.find(params.fetch("id_to_modify"))
 
     @bout.level_id = params.fetch("level_id")
+    @bout.bout_no = params.fetch("bout_no")
 
     if @bout.valid?
       @bout.save

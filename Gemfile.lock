@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/firstdraft/web_git.git
-  revision: 69437ecbdef3bf4747772704964a5b33ea0524bd
+  revision: d41f966c9f6a8b2c207b95a884672298aeaef9c6
   specs:
     web_git (0.0.3)
       diffy
@@ -102,10 +102,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    devise (4.6.2)
+    devise (4.7.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 6.0)
+      railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
@@ -165,7 +165,7 @@ GEM
     momentjs-rails (2.20.1)
       railties (>= 3.1)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     octicons (9.1.1)
       nokogiri (>= 1.6.3.1)
@@ -223,7 +223,7 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
-    rollbar (2.21.0)
+    rollbar (2.22.0)
     rspec-core (3.8.2)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.4)

@@ -14,6 +14,14 @@
     <%= select_tag(:level_id, options_from_collection_for_select(Level.all, :id, :stage, @bout.level_id), :class => "form-control") %>
   </div>
 
+  <div class="form-group">
+    <label for="bout_no">
+      Bout no
+    </label>
+
+    <input type="text" id="bout_no" name="bout_no" class="form-control" value="<%= @bout.bout_no %>">
+  </div>
+
   <button class="btn btn-block btn-outline-secondary">
     Update bout
   </button>
